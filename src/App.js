@@ -1,7 +1,6 @@
 import { useEffect, useState, } from 'react';
 import { Container, Button, Form, Card, Col, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './logo.svg';
 import './App.css';
 
 
@@ -24,6 +23,8 @@ function App() {
   const [ output, setOutput ] = useState(0);
 
   // Whenever the dependency changes
+  // I have used the currency api that is free for use
+  // https://github.com/fawazahmed0/currency-api#readme
   useEffect(()=>{
     Axios.get(
       `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`
